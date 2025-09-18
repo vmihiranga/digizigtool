@@ -21,7 +21,7 @@ It’s designed with a sleek gradient interface and user-friendly controls to ma
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/<your-username>/vm-instagram-tools.git
+git clone https://github.com/vmihiranga/vmigtools.git
 cd vm-instagram-tools
 ````
 
@@ -34,7 +34,7 @@ npm install
 ### 3️⃣ Run locally
 
 ```bash
-npm run dev
+npm start
 ```
 
 Your app will be available at `http://localhost:3000`
