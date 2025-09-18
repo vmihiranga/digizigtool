@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Instagram Tools - Download & Analyze Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E4405F'><path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z'/></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fab fa-instagram"></i>
+                <h1>VM Instagram Tools</h1>
+            </div>
+            <p class="subtitle">Download & Analyze Instagram Content - 2025</p>
+            <p class="creator">Created by Vishwa Mihiranga</p>
+        </header>
+
+    
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="download">
+                <i class="fas fa-download"></i> Download
+            </button>
+            <button class="nav-tab" data-tab="stories">
+                <i class="fas fa-history"></i> Stories
+            </button>
+            <button class="nav-tab" data-tab="search">
+                <i class="fas fa-search"></i> Search
+            </button>
+            <button class="nav-tab" data-tab="stalker">
+                <i class="fas fa-user-secret"></i> Profile Info
+            </button>
+        </nav>
+
+        <!-- Download Tab -->
+        <div class="tab-content active" id="download">
+            <div class="main-section">
+                <h2 class="section-title">Download Instagram Content</h2>
+                
+                <div class="input-group">
+                    <input type="url" class="input-field" id="downloadUrl" 
+                           placeholder="Paste Instagram Post or Reel URL here...">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary btn-full" id="downloadBtn">
+                        <i class="fas fa-download"></i>
+                        Download Media
+                    </button>
+                    <button class="btn btn-secondary" id="clearDownloadBtn">
+                        <i class="fas fa-times"></i>
+                        Clear Results
+                    </button>
+                </div>
+
+                <div class="loading hidden" id="downloadLoading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Fetching content and analyzing post details...</p>
+                </div>
+
+                <div class="message hidden" id="downloadMessage"></div>
+                
+                <div class="result hidden" id="downloadResult">
+                    <div class="author-info" id="downloadAuthorInfo"></div>
+                    <div class="media-grid" id="downloadMediaGrid"></div>
+                    <div class="download-links" id="downloadLinks"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stories Tab -->
+        <div class="tab-content" id="stories">
+            <div class="main-section">
+                <h2 class="section-title">Download Instagram Stories</h2>
+                
+                <div class="input-group">
+                    <input type="text" class="input-field" id="storiesUsername" 
+                           placeholder="Enter Instagram username (e.g., cristiano)">
+                    <i class="fas fa-user"></i>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary btn-full" id="storiesBtn">
+                        <i class="fas fa-history"></i>
+                        Get Stories
+                    </button>
+                    <button class="btn btn-secondary" id="clearStoriesBtn">
+                        <i class="fas fa-times"></i>
+                        Clear Results
+                    </button>
+                </div>
+
+                <div class="loading hidden" id="storiesLoading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Fetching active stories and highlights...</p>
+                </div>
+
+                <div class="message hidden" id="storiesMessage"></div>
+                
+                <div class="result hidden" id="storiesResult">
+                    <div class="author-info" id="storiesAuthorInfo"></div>
+                    <div class="media-grid" id="storiesMediaGrid"></div>
+                    <div class="download-links" id="storiesDownloadLinks"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Tab -->
+        <div class="tab-content" id="search">
+            <div class="main-section">
+                <h2 class="section-title">Search Instagram</h2>
+                
+                <div class="search-type-selector">
+                    <button class="search-type-btn active" data-type="users">
+                        <i class="fas fa-users"></i> Users
+                    </button>
+                    <button class="search-type-btn" data-type="hashtags">
+                        <i class="fas fa-hashtag"></i> Hashtags
+                    </button>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" class="input-field" id="searchQuery" 
+                           placeholder="Search for Instagram users (e.g., cristiano)...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary btn-full" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                        Search Instagram
+                    </button>
+                    <button class="btn btn-secondary" id="clearSearchBtn">
+                        <i class="fas fa-times"></i>
+                        Clear Results
+                    </button>
+                </div>
+
+                <div class="loading hidden" id="searchLoading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Searching Instagram database...</p>
+                </div>
+
+                <div class="message hidden" id="searchMessage"></div>
+                
+                <div class="result hidden" id="searchResult">
+                    <div class="search-results" id="searchResults"></div>
+                    
+                    <div class="no-results hidden" id="noResults">
+                        <i class="fas fa-search-minus"></i>
+                        <h3>No Results Found</h3>
+                        <p>We couldn't find any results matching your search query. Try using different keywords or check the spelling.</p>
+                        <button class="btn btn-primary" onclick="document.getElementById('searchQuery').focus()">
+                            <i class="fas fa-search"></i> Try Another Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Stalker Tab -->
+        <div class="tab-content" id="stalker">
+            <div class="main-section">
+                <h2 class="section-title">Instagram Profile Analytics</h2>
+                
+                <div class="input-group">
+                    <input type="text" class="input-field" id="stalkerUsername" 
+                           placeholder="Enter Instagram username for detailed profile analysis...">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary btn-full" id="stalkerBtn">
+                        <i class="fas fa-user-secret"></i>
+                        Analyze Profile
+                    </button>
+                    <button class="btn btn-secondary" id="clearStalkerBtn">
+                        <i class="fas fa-times"></i>
+                        Clear Results
+                    </button>
+                </div>
+
+                <div class="loading hidden" id="stalkerLoading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Analyzing profile data and recent activity...</p>
+                </div>
+
+                <div class="message hidden" id="stalkerMessage"></div>
+                
+                <div class="result hidden" id="stalkerResult">
+                    <div class="profile-card" id="profileCard"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for media preview -->
+        <div class="modal" id="mediaModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="social-section">
+            <h3>Connect with VM Tools</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-icon" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 VM Instagram Tools. Educational purposes only.</p>
+            <p>Built with love for content creators and social media enthusiasts</p>
+            <p><strong>Created by Vishwa Mihiranga</strong></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
