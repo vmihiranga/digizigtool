@@ -1,6 +1,3 @@
-Sure! Here’s the full **README.md** content you can copy directly:
-
-````markdown
 # VM Instagram Tools
 
 VM Instagram Tools is a modern web application for downloading and analyzing Instagram content.  
@@ -77,4 +74,4 @@ Created by **Vishwa Mihiranga**
 Built with ❤️ for content creators and social media enthusiasts.
 
 ```
-```
+
