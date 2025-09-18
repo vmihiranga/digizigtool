@@ -73,5 +73,4 @@ Follow the creator & get updates:
 Created by **Vishwa Mihiranga**
 Built with ❤️ for content creators and social media enthusiasts.
 
-```
 
