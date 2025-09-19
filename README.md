@@ -22,7 +22,7 @@ It’s designed with a sleek gradient interface and user-friendly controls to ma
 ### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/vmihiranga/vmigtools.git
-cd vm-instagram-tools
+cd vmigtools
 ````
 
 ### 2️⃣ Install dependencies
@@ -61,10 +61,10 @@ Your app will be available at `http://localhost:3000`
 
 Follow the creator & get updates:
 
-* [Instagram](#)
-* [GitHub](#)
-* [Twitter](#)
-* [LinkedIn](#)
+* [Instagram](https://instagram.com/x_vishwa_22)
+* [GitHub](https://github.com/vmihiranga)
+* [Tiktok](https://tiktok.com/@x_vishwa_22)
+* [Whatsapp](https://api.whatsapp.com/send?phone=94724826875)
 
 ---
 
