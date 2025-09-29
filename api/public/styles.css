@@ -2374,9 +2374,7 @@ html {
 
 /* Responsive Design - Mobile */
 @media (max-width: 768px) {
-    body {
-        perspective: 500px;
-    }
+
     
     .container { 
         padding: 0.8rem; 
