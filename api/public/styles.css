@@ -39,7 +39,6 @@ body {
     color: var(--text-dark);
     opacity: 0;
     animation: fadeInBody 0.8s ease forwards 0.5s;
-    perspective: 1000px;
 }
 
 @keyframes fadeInBody {
@@ -2599,3 +2598,4 @@ html {
 }
 
 /* End of Enhanced 3D CSS */
+
